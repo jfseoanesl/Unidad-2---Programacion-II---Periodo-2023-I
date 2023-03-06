@@ -16,8 +16,16 @@ public class Rectangulo {
     
     // metodo constructor por defecto
     public Rectangulo(){
-        this.altura=10;
-        this.base=5;
+        this(10,5);
+    }
+    
+    public Rectangulo(double b, double a){
+        this.base=b;
+        this.altura=a;
+    }
+    
+    public Rectangulo(double b){
+        this(b,10);
     }
     
     // metodos getter
@@ -46,5 +54,13 @@ public class Rectangulo {
     
     public double calcularPerimetro(){
         return 2 * (this.base + this.altura);
+    }
+    
+    
+    public double areaDiferencia(double area){
+        
+        double diferencia = Math.abs(this.calcularArea() - area);
+        return diferencia;
+    
     }
 }

@@ -20,14 +20,20 @@ public class Principal {
         
         Rectangulo r = new Rectangulo();
         System.out.println("Area:"+ r.calcularArea());
-       imprimirRectangulo(r);
+        imprimirRectangulo(r);
         
         System.out.println("-------------------------------");
         
         Rectangulo a = new Rectangulo();
-        a.setAltura(50);
-        a.setBase(30);
+        a.setAltura(30);
+        a.setBase(50);
         imprimirRectangulo(a);
+        System.out.println("-------------------------------");
+        
+        Rectangulo c = new Rectangulo(0, 0);
+        imprimirRectangulo(c);
+        
+        System.out.println("Diferencia Area a y c: " + a.areaDiferencia(c.calcularArea()));
     }
     
     public static void imprimirRectangulo(Rectangulo r){
