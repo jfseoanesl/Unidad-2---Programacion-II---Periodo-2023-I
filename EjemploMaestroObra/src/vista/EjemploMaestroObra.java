@@ -4,6 +4,8 @@
  */
 package vista;
 
+import modelo.*;
+
 /**
  *
  * @author Jairo F
@@ -15,6 +17,11 @@ public class EjemploMaestroObra {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Vivienda v = new Vivienda(500);
+        Maestro t = new Maestro();
+        
+        System.out.println("Pago : " + t.calcularPago(v));
+        System.out.println("Pago: " + t.calcularPago(v.getMtsContruccion()));
     }
     
 }

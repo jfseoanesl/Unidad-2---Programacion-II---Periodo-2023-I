@@ -63,4 +63,11 @@ public class Rectangulo {
         return diferencia;
     
     }
+    
+    public double areaDiferencia(Rectangulo r){
+        
+        double area = r.calcularArea();
+        return this.areaDiferencia(area);
+    
+    }
 }
